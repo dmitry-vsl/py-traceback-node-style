@@ -45,6 +45,7 @@ class TestJsLikeTraceback(unittest.TestCase):
         expected = textwrap.dedent(expected).lstrip()
 
         result = run(code)
+
         self.assertEqual(result, expected)
 
 

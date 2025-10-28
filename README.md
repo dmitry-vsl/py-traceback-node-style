@@ -36,7 +36,7 @@ Traceback (most recent call last):
 ValueError: Division error
 ```
 
-Using this script, you can format the traceback output to match Node.js styling. It's vim-friendly—you can position your cursor on a line and press `gF` to jump to the exact location (file, line, and column):
+Using this script, you can format the traceback output to match Node.js styling. It's VIM-friendly—you can position your cursor on a line and press `gF` to jump to the exact location (file, line, and column):
 ```
 /private/tmp/test.py:8:4
     raise ValueError('Division error') from e
@@ -52,11 +52,14 @@ ValueError: Division error
 
 ## How to Install
 
-- Create a directory (for example, `/Users/someuser/js_like_traceback`)
-- Save the file `./sitecustomize.py` to that directory
-- Set PYTHONPATH in your `~/.profile`:
+- Clone a repo to your computer:
   ```
-  export PYTHONPATH="/Users/someuser/js_like_traceback"
+  git clone https://github.com/dmitry-vsl/py-traceback-node-style.git
+  ```
+
+- Set PYTHONPATH in your `~/.profile` to include a repository:
+  ```
+  export PYTHONPATH="<path-to-py-traceback-node-style>"
   ```
 
 That's it! The `./sitecustomize.py` file will be automatically loaded and will customize how tracebacks are printed in your Python programs.
